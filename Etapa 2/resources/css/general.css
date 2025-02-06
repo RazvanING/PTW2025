@@ -1,0 +1,325 @@
+/*resetare CSS*/
+*{
+    list-style: none;
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+    color:black;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+a{
+    color:black;
+}
+/*CSS custom*/
+html{
+    --dimensiune-text:17px;
+    font-size: var(--dimensiune-text);
+    transition: all 500ms linear; 
+}
+
+.eater-regular {
+    font-family: "Eater", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+p { font-size: 1rem; }
+
+body{
+    
+    background:var(--tricolor);
+    --tricolor:linear-gradient(150deg, blue, yellow, red);
+    --albastru: #543BF5;
+    --mov: #CC3BF5;
+    --albastru2: #543BF5;
+    --visiniu: #F53BD0;
+    --roz: #DE8CF5;
+    --spatiere--pagina:1%; /*prefer in procente pentrru afisare frumoasa pe mobil*/
+ 
+
+    padding-left: var(--spatiere--pagina);
+    padding-right: var(--spatiere--pagina);
+
+
+}
+header, footer{
+    background-color: var(--albastru);
+    color: white;
+    text-align: center;
+    padding: 0.5%;
+    margin: 0.5% 0;
+}
+main{
+   --spatiere--pagina:1%; /*prefer in procente pentrru afisare frumoasa pe mobil*/
+    padding-left: var(--spatiere--pagina);
+    padding-right: var(--spatiere--pagina);
+}
+
+#grid-pagina{
+    display: grid;
+    grid-template-areas: "f-prezentare f-prezentare f-prezentare f-prezentare"
+                         "f-diverse f-diverse f-diverse f-diverse"
+                         "f-calendar f-table-container f-table-container f-anunturi"
+                         "f-utilizatori f-statistici f-server f-server";
+    gap: 20px;
+    row-gap: 10px;
+}
+
+#grid-pagina > * {
+    outline: 1px solid black;
+    margin: 0;
+    padding: 15px;
+}
+#header{
+    grid-area: header;
+    background-color: var(--albastru);
+    border: 2px solid var(--mov);
+  
+}
+#prezentare{
+    grid-area: f-prezentare;
+    background-color: var(--mov);
+    border: 2px solid var(--albastru2);
+    border-radius: 15px;
+}
+#diverse{
+    grid-area: f-diverse;
+    background-color: var(--visiniu);
+    border: 2px solid var(--roz);
+    border-radius: 15px;
+}
+#calendar{
+    grid-area: f-calendar;
+    background-color: var(--roz);
+    border: 2px solid var(--visiniu);
+    border-radius: 15px;
+
+}
+#table-container{
+    grid-area: f-table-container;
+    background-color: var(--albastru2);
+    border: 2px solid var(--mov);
+    border-radius: 15px;
+}
+#anunturi{
+    grid-area: f-anunturi;
+    background-color: var(--visiniu);
+    border: 2px solid var(--albastru);
+    border-radius: 15px;
+}
+#utilizatori{
+    grid-area: f-utilizatori;
+    background-color: var(--roz);
+    border: 2px solid var(--albastru2);
+    border-radius: 15px;
+}
+#statistici{
+    grid-area: f-statistici;
+    background-color: var(--mov);
+    border: 2px solid var(--visiniu);
+    border-radius: 15px;
+}
+#server{
+    grid-area: f-server;
+    background-color: var(--albastru2);
+    border: 2px solid var(--roz);
+    border-radius: 15px;
+}
+#footer{
+    grid-area: footer;
+    background-color: var(--albastru);
+    border: 2px solid var(--mov);
+    border-radius: 15px;
+}
+@media screen and (max-width: 768px){
+    #grid-pagina{
+        grid-template-areas: "f-prezentare"
+                             "f-diverse"
+                             "f-calendar"
+                             "f-table-container"
+                             "f-anunturi"
+                             "f-utilizatori"
+                             "f-statistici"
+                             "f-server";
+        padding-left: 0.75%;
+        padding-right: 0.75%;
+        gap: 15px;
+        row-gap: 8px;
+    }
+
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.3rem; }
+    h3 { font-size: 1rem; }
+    p { font-size: 0.8rem; }
+}
+
+@media screen and (max-width: 480px){
+    #grid-pagina{
+        grid-template-areas: "f-prezentare"
+                             "f-diverse"
+                             "f-calendar"
+                             "f-table-container"
+                             "f-anunturi"
+                             "f-utilizatori"
+                             "f-statistici"
+                             "f-server";
+        padding-left: 0.5%;
+        padding-right: 0.5%;
+        gap: 10px;
+        row-gap: 5px;
+    }
+
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1rem; }
+    h3 { font-size: 0.9rem; }
+    p { font-size: 0.8rem; }
+}
+.container-iframe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5%;
+    width: 360px;
+}
+
+.container-iframe iframe{
+    width:100%;
+}
+
+.taburi-iframe{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:10px;
+    order: 1; /* Ne asiguram ca butoanele sunt ordonate, dupa iframe */
+}
+
+.container-iframe iframe {
+    order: 0; /* Ne asiguram ca iframe=ul e pus inaintea butoanelor */
+}
+
+.taburi-iframe>a{
+    width: 120px;
+    height: 60px;
+    line-height: 30px;
+    text-align: center;
+    border: 2px solid #f1c8fc;
+    background: linear-gradient(to bottom, #543BF5 0%, #ffffff 100%);
+    background-size: 100% 200%;
+    background-position: 0 0;
+    --colt-rotunjit:15px;
+    border-bottom-left-radius: var(--colt-rotunjit);
+    border-bottom-right-radius: var(--colt-rotunjit);
+    transition: all 0.5s linear;
+    text-decoration: none;
+    margin: 0 5px; /* Add some space between buttons */
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    color: black;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Diffuse white shadow */
+}
+
+.taburi-iframe>a:hover{
+    background-position: 0 100%;
+}
+
+
+.table-container {
+    max-width: 100%;
+    overflow-x: fit-content;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-weight: bold;
+    color: var(--albastru);
+}
+
+th {
+    background-color: var(--albastru);
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+tbody tr:hover {
+    background-color: var(--roz);
+    transition: background-color 0.3s ease;
+}
+
+tfoot {
+    background-color: var(--mov);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    table {
+        border-spacing: 0;
+    }
+}
+
+#link-top{
+    position:fixed;
+    font-size: 2.5rem;
+    box-shadow: blue 0px 0px 5px 4px;
+    bottom:0.3em;
+    opacity:0.5;
+    right:0.3em;
+    width:3.5rem;
+    box-sizing: border-box;
+    height:3.5rem;
+    text-align:center;
+    line-height:3rem;
+    color: gray;
+    border:5px solid grey;
+    border-radius:50%;
+    background: rgb(220,220,220);
+    transition: all 0.5s linear;
+}
+#link-top:hover{
+    opacity:1;
+}
+
+.charm-regular {
+    font-family: "Charm", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .charm-bold {
+    font-family: "Charm", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+header {
+    font-family: "Charm", serif;
+    font-weight: 700;
+}
+
+  
+  
