@@ -1,0 +1,56 @@
+{
+    "cale_baza": "/resources/images",
+    "eroare_default":{
+        "titlu":"Eroare !!!",
+        "text": "A survenit o eroare.",
+        "imagine":"fault.png"
+    },
+    "info_erori": [
+        {
+            "identificator":404,
+            "status":true,
+            "titlu":"404 - Fault!",
+            "text": "O fost ofsaid!",
+            "imagine":"offside.png"
+        },
+        {
+            "identificator":403,
+            "status":true,
+            "titlu":"403 - Ba, la cealalta poarta, ba!!",
+            "text": "Vezi ca esti in vestiarul la adversari!",
+            "imagine":"fault.png"
+        },
+        {
+            "identificator":400,
+            "status":true,
+            "titlu":"400 - bad request",
+            "text": "Cerere gresita",
+            "imagine":"fault.png"
+        },
+        
+        {
+            "identificator":1,
+            "status":false,
+            "titlu":"Se pune gazonul",
+            "text": "Rabdare sa creasca iarba!",
+            "imagine":"fault.png"
+        },
+        
+        {
+            "identificator":2,
+            "status":false,
+            "titlu":"Eroare baza date",
+            "text": "Bre, esti inca selectionat!",
+            "imagine":"fault.png"
+        },
+        
+        {
+            "identificator":3,
+            "status":false,
+            "titlu":"Date gresite",
+            "text": "Ai uitat cum te cheama",
+            "imagine":"fault.png"
+        }
+    ]
+}
+  

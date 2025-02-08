@@ -1,0 +1,516 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*CSS custom*/
+/* Setam dimensiunea default a textului pentru intreg site-ul */
+html{
+    --dimensiune-text:17px;
+    font-size: var(--dimensiune-text);
+    transition: all 500ms linear; 
+}
+
+/* Font pentru titlu site */
+.germania-one-regular {
+    font-family: "Germania One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /*Inceput CALENDAR */
+
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #F53BD0;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background:  #543BF5;
+  color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+  /* SFARSIT CALENDAR */
+h1 { font-size: 3rem; 
+    font-family: "Germania One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+p { font-size: 1rem; }
+
+body{
+      background-color: var(--mov);
+    --albastru: #543BF5;
+    --mov: #CC3BF5;
+    --rosu: #F53B60;
+    --albastru2: #543BF5;
+    --visiniu: #F53BD0;
+    --roz: #DE8CF5;
+    --spatiere--pagina:12%; 
+
+    padding-left: var(--spatiere--pagina);
+    padding-right: var(--spatiere--pagina);
+    
+
+}
+
+main{
+   --spatiere--pagina:50px;
+    padding-left: var(--spatiere--pagina);
+    padding-right: var(--spatiere--pagina);
+    
+}
+
+#grid-pagina{
+    padding-top: 20px;
+    display: grid;
+    grid-template-areas: "z-prezentare z-prezentare z-prezentare z-prezentare"
+                         "z-diverse z-diverse z-diverse z-diverse"
+                         "z-calendar z-tabel z-tabel z-anunturi"
+                         "z-utilizatori z-statistici z-server z-server";
+    gap: 20px;
+    row-gap: 10px;
+    padding-bottom: 20px;
+    
+  
+   
+
+   
+}
+
+#grid-pagina > * {
+    /* outline: 1px solid black; */
+    margin: 0;
+    padding: 15px;
+}
+#prezentare{
+    
+    grid-area: z-prezentare;
+    border: 2px solid var(--rosu);
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+#diverse{
+    grid-area: z-diverse;
+    text-align: center;
+    border: 2px solid var(--albastru);
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+#tabel{
+    grid-area: z-tabel;
+    border: 2px solid var(--visiniu);
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+}
+#calendar{
+    grid-area: z-calendar;
+    border: 2px solid var(--roz);
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+#anunturi{
+    grid-area: z-anunturi;
+    border: 2px solid var(--mov);
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+}
+#utilizatori{
+    grid-area: z-utilizatori;
+    border: 2px solid var(--albastru2);
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+#statistici{
+    grid-area: z-statistici;
+    border: 2px solid var(--roz);
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+#server{
+    grid-area: z-server;
+    border: 2px solid var(--visiniu);
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.container-iframe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the container vertically */
+    padding-left: 5%;
+    width: 360px;
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.container-iframe iframe{
+    width:100%;
+}
+
+.taburi-iframe{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:10px;
+    order: 1; /* Ensure buttons are ordered after iframe */
+}
+
+.container-iframe iframe {
+    order: 0; /* Ensure iframe is placed before buttons */
+}
+
+.taburi-iframe>a{
+    width: 120px;
+    height: 60px;
+    line-height: 30px;
+    text-align: center;
+    border: 2px solid #f1c8fc;
+    background: linear-gradient(to bottom, #543BF5 0%, #ffffff 100%);
+    background-size: 100% 200%;
+    background-position: 0 0;
+    --colt-rotunjit:15px;
+    border-bottom-left-radius: var(--colt-rotunjit);
+    border-bottom-right-radius: var(--colt-rotunjit);
+    transition: all 0.5s linear;
+    text-decoration: none;
+    margin: 0 5px; /* Add some space between buttons */
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    color: black;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Diffuse white shadow */
+}
+
+.taburi-iframe>a:hover{
+    background-position: 0 100%;
+}
+
+
+.tabel-container {
+    max-width: 100%;
+    overflow-x: fit-content;
+}
+
+tabel {
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-weight: bold;
+    color: var(--albastru);
+}
+
+th {
+    background-color: var(--albastru);
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+tbody tr:hover {
+    background-color: var(--roz);
+    transition: background-color 0.3s ease;
+}
+
+tfoot {
+    background-color: var(--mov);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    table {
+        border-spacing: 0;
+    }
+}
+
+#link-top{
+    position:fixed;
+    font-size: 2.5rem;
+    box-shadow: blue 0px 0px 5px 4px;
+    bottom:0.3em;
+    opacity:0.5;
+    right:0.3em;
+    width:3.5rem;
+    box-sizing: border-box;
+    height:3.5rem;
+    text-align:center;
+    color: gray;
+    border:5px solid grey;
+    border-radius:50%;
+    background: rgb(220,220,220);
+    transition: all 0.5s linear;
+}
+#link-top:hover{
+    opacity:1;
+}
+  
+nav {
+    --latime-buton:120px;
+    --inaltime-buton:25px;
+    --culoare-deschisa-meniu:#F53B60;
+    --culoare-inchisa-meniu:#543BF5;
+    background-color: var(--culoare-deschisa-meniu);
+  }
+  
+  #hamburger, #ch-menu {
+    display: none;
+  }
+  
+  ul.meniu div.imag-icon {
+    display: none;
+  }
+  
+  /*  submeniu  */
+  ul.meniu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul.meniu ul {
+    display: none;
+    padding: 0;
+    list-style-type: none;
+    z-index: 3;
+    position: relative;
+    margin-left: -1px;
+    animation-name: afis_submeniu;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    transform-origin: 50% 0;
+  }
+  ul.meniu li {
+    border: 1px solid var(--culoare-inchisa-meniu);
+    background-color: var(--culoare-deschisa-meniu);
+    width: var(--latime-buton);
+    height: var(--inaltime-buton);
+    line-height: var(--inaltime-buton);
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.5s linear;
+    box-sizing: border-box;
+  }
+  ul.meniu li:hover {
+    background-color: var(--culoare-inchisa-meniu);
+  }
+  ul.meniu li:hover ul {
+    display: block;
+  }
+  ul.meniu li div, ul.meniu li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.5s linear;
+  }
+  ul.meniu li div:hover, ul.meniu li a:hover {
+    color: white;
+  }
+  
+  @keyframes afis_submeniu {
+    0% {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  body{
+    overflow-x: hidden;
+}
+
+/*extrem de cringe*/
+h1 {
+    animation-name: misca_titlu;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    opacity: 0;
+    transform: scale(0);
+    animation-fill-mode: forwards;
+}
+
+@keyframes misca_titlu {
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#imagini {
+    image-orientation: from-image;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+#imagini img {
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin: 10px; /* Add some space between images */
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+#imagini img:hover {
+    transform: scale(1.1); /* Scale the image up slightly on hover */
+}
+
+#imagini img:active {
+    transform: scale(2); /* Scale the image up slightly on click */
+}
+
+header, footer{
+    background:var(--tricolor);
+    --tricolor:linear-gradient(150deg, blue, yellow, red); /* Culorile steagului Romaniei */
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 0.5%;
+    margin: 0.5% 0;
+    width: 100%;
+}
+
+

@@ -1,0 +1,41 @@
+{
+  "name": "etapa-4",
+  "version": "1.0.0",
+  "description": "Acesta este un proiect scolar!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "magazin",
+    "patriotic",
+    "romania",
+    "tricouri",
+    "steag",
+    "tricolor",
+    "cadouri",
+    "personalizate",
+    "naționalist",
+    "produse",
+    "naționaliste",
+    "România",
+    "Dacia",
+    "Peluza",
+    "Nord",
+    "Peluza",
+    "Fotbal",
+    "fotbal",
+    "suporteri",
+    "ultrasi"
+  ],
+  "author": "Razvan Bimbasa",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  },
+  "type": "module"
+}

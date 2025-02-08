@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <%- include("../fragmente/head.ejs");  %>
+    </head>
+
+<body>
+  
+   
+    <%- include("../fragmente/header.ejs");  %>
+ 
+       <%- include("../fragmente/nav.ejs");  %>
+
+    <main> 
+    <div id="grid-pagina">
+        <!--ZONA 1 PREZENTARE-->
+        <div id="prezentare">
+           <h2>Bine ati venit</h2>
+           <p>Magazinul nostru oferă o gamă variată de produse, de la tricouri cu steagul Romaniei, la steaguri, fulare și multe altele. Toate produsele sunt de calitate superioară și sunt disponibile la prețuri accesibile.</p>
+        </div>
+
+        <div id="diverse" >
+            <section id="videoclipuri">
+                <h2>Muzica care ne reprezinta</h2>
+                <br>
+            
+                <div class="container-iframe">
+                    <div class="taburi-iframe">
+                    <a href="https://www.youtube.com/embed/NP2yCWFpDko?si=BtCtW47-mXjP_0zS" target="ifr-video">Imnul national</a>
+                    <a href="https://www.youtube.com/embed/RxFSjxZLjlY?si=jFGEg9OkcMezGMce" target="ifr-video" >Tectonic Paranoia</a>
+                    <a href="https://www.youtube.com/embed/e-1Uc3Lm434?si=89m3mQpyubUbaa0q" target="ifr-video" >Tectonic Anomalia</a><br/>
+                    </div>
+
+                    <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/NP2yCWFpDko"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section id="imagini">
+            
+                <img src="/resources/images/imagine1.jpg" alt="Steagul Romaniei">
+                <img src="/resources/images/imagine2.jpg" alt="Tricou cu steagul Romaniei">
+                <img src="/resources/images/imagine4.jpg" alt="Fular cu steagul Romaniei">
+            </section>
+        </div>
+
+        <!--Tabel-->
+        <div id="tabel">
+            <table>
+                <caption>Program companie</caption>
+                <thead>
+                    <tr>
+                        <th>Departament</th>
+                        <th>Program</th>
+                        <th>Evenimente</th>
+                        <th>Detalii</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Vânzări</td>
+                        <td>L-V: 9:00-17:00</td>
+                        <td>Lansare produs nou - Mai 2025</td>
+                        <td>Un nou model de fular cu Lupul Dacic!</td>
+                    </tr>
+                    <tr>
+                        <td>S: 10:00-14:00</td>
+                        <td>Training echipă - Iunie 2025</td>
+                        <td>Perioada concediu</td>
+                    </tr>
+                    <tr>
+                        <td>Marketing</td>
+                        <td>L-V: 10:00-18:00</td>
+                        <td>Ziua Aviatiei Iulie</td>
+                        <td>Reduceri pentru piloti.</td>
+                    </tr>
+                    <tr>
+                        <td>Dezvoltare</td>
+                        <td>L-V: 8:00-16:00</td>
+                        <td>1 Decembrie</td>
+                        <td>Ziua Nationala!</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Date actualizate: Februarie 2025</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div id="calendar">
+            <h2>Calendar</h2>
+
+            <div class="month">      
+              <ul>
+                <li class="prev">&#10094;</li>
+                <li class="next">&#10095;</li>
+                <li>
+                  Februarie<br>
+                  <span style="font-size:18px">2025</span>
+                </li>
+              </ul>
+            </div>
+            
+            <ul class="weekdays">
+              <li>Mo</li>
+              <li>Tu</li>
+              <li>We</li>
+              <li>Th</li>
+              <li>Fr</li>
+              <li>Sa</li>
+              <li>Su</li>
+            </ul>
+            
+            <ul class="days">  
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li><span class="active">10</span></li>
+              <li>11</li>
+              <li>12</li>
+              <li>13</li>
+              <li>14</li>
+              <li>15</li>
+              <li>16</li>
+              <li>17</li>
+              <li>18</li>
+              <li>19</li>
+              <li>20</li>
+              <li>21</li>
+              <li>22</li>
+              <li>23</li>
+              <li>24</li>
+              <li>25</li>
+              <li>26</li>
+              <li>27</li>
+              <li>28</li>
+              <li>29</li>
+              <li>30</li>
+              <li>31</li>
+            </ul>
+                
+        </div>
+
+        <div id="anunturi">
+            <h2>Anunturi</h2><p><time datetime="1986-05-07">7 mai 1986</time> <strong>Steaua castiga cupa campionilor!!!!</strong></p>
+          <br>
+            <math xmlns="http://www.w3.org/1998/Math/MathML"> 
+                <mrow>
+                  <mstyle mathcolor="white">
+                    <mi>Goluri Steaua Bucuresti</mi>
+                  </mstyle>
+                  <mo>=</mo>
+                    <mstyle mathcolor="red">
+                        <mn>4</mn>
+                    </mstyle>
+                </mrow>
+                <mrow>
+                  <mstyle mathcolor="white">
+                    <mi>Goluri Dinamo Bucuresti</mi>
+                  </mstyle>
+                  <mo>=</mo>
+                    <mstyle mathcolor="blue">
+                        <mn>2</mn>
+                    </mstyle>
+                </mrow>
+                
+                <mrow>
+                    <mstyle mathcolor="white">
+                      <mi>Goluri Rapid Giulesti</mi>
+                    </mstyle>
+                    <mo>=</mo>
+                      <mstyle mathcolor="blue">
+                          <mn>2</mn>
+                      </mstyle>
+                  </mrow>
+              </math>
+            
+        </div>
+
+        <div id="utilizatori">
+            <h2>Utilizatori activi</h2>
+            <h3>MACHETA</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui provident expedita corporis! Provident, unde sit corrupti quia vel molestiae maxime in natus id et ullam iusto a! Voluptatum, perspiciatis commodi.</p>
+        </div>
+
+        <div id="statistici">
+            <h2>Statistici Clasament</h2>
+            <h3>MACHETA</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit deserunt temporibus, sapiente corrupti doloremque iure quos eligendi? Totam, cupiditate optio ratione non illum reprehenderit delectus, eveniet eum dolore unde nostrum!</p>
+        </div>
+
+        <div id="server">
+            <h2>Date site si server</h2>
+            <h3>MACHETA</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, vero at quibusdam minima cum in rerum suscipit praesentium molestias error consequatur. Consequatur, dolores nam voluptas omnis sequi iste earum voluptatibus?</p>
+        </div>
+    </div>
+
+    <%- include("../fragmente/footer.ejs");  %>
+      
+    </main>
+
+</body>
+
+</html>
+
