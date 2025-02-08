@@ -1,0 +1,19 @@
+html{
+    --dimensiune-text:13px;
+}
+
+body{
+    --spatiere--pagina:50px;
+}
+
+#grid-pagina{
+    grid-template-areas:"z-prezentare z-prezentare"
+                        "z-diverse z-diverse"
+                        "z-calendar z-calendar"
+                        "z-tabel z-tabel"
+                        "z-anunturi z-anunturi"
+                        "z-utilizatori z-utilizatori"
+                        "z-statistici z-statistici"
+                        "z-server z-server";
+}
+
